@@ -84,14 +84,14 @@ class ElementTest extends PHPUnit_Framework_TestCase
   {
     // The order of children with same weight should be preserved.
     $element_mixed_weight = array(
-      'child4' => array('#weight' => -20),
+      'child5' => array('#weight' => 10),
       'child3' => array('#weight' => -10),
       'child1' => array(),
-      'child5' => array('#weight' => -20),
+      'child4' => array('#weight' => 10),
       'child2' => array(),
     );
 
-    $expected = array('child4', 'child5', 'child3', 'child1', 'child2');
+    $expected = array('child3', 'child1', 'child2', 'child5', 'child4');
     $this->assertSame($expected, Element::children($element_mixed_weight, TRUE));
   }
 }
