@@ -16,5 +16,10 @@ php:
   # aliased to a recent 5.6.x version
   - 5.6
 
+# whitelist
+branches:
+  only:
+    - master
+
 # omitting "script:" will default to phpunit
 script: phpunit --configuration phpunit.xml --coverage-text
