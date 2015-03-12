@@ -26,6 +26,7 @@ class Element
     }
     // Sort the children if necessary.
     if ($sort && $sortable) {
+      $children = array_reverse($children);
       uasort($children, 'self::sortByWeightProperty');
       // Put the sorted children back into $elements in the correct order, to
       // preserve sorting if the same element is passed through
